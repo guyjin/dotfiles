@@ -1,0 +1,5 @@
+font-family = "RecMonoCasual Nerd Font Mono"
+font-size = 20 
+theme = dark:catppuccin-mocha,light:catppuccin-latte
+window-width = 120
+window-height = 50

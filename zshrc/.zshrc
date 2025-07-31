@@ -150,3 +150,4 @@ eval "$(~/.local/bin/mise activate)"
 # eval "$(zellij setup --generate-auto-start zsh)"
 eval "$(starship init zsh)"
 fastfetch
+eval "$(/Users/ben/.local/bin/mise activate zsh)"

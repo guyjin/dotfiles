@@ -303,14 +303,6 @@
                         "vendor_id": 1133
                     },
                     "ignore": true
-                },
-                {
-                    "identifiers": {
-                        "is_keyboard": true,
-                        "product_id": 666,
-                        "vendor_id": 76
-                    },
-                    "treat_as_built_in_keyboard": true
                 }
             ],
             "name": "Default profile",

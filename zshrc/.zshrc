@@ -147,6 +147,7 @@ export PATH="$PATH:/Users/ben/.local/bin"
 eval "$(rbenv init - zsh)"
 eval "$(~/.local/bin/mise activate)"
 eval "$(~/.local/bin/mise activate)"
+eval "$(zoxide init zsh)"
 # eval "$(zellij setup --generate-auto-start zsh)"
 eval "$(starship init zsh)"
 fastfetch

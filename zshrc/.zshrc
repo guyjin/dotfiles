@@ -106,7 +106,7 @@ export ARCHFLAGS="-arch arm64"
 alias reset="tput reset"
 # File system
 alias ls='eza -lh --group-directories-first --icons'
-alias lsa='eza -lag --header'
+alias lsa='eza -lag --header --group-directories-first --icons'
 alias lt='eza --tree --level=2 --long --icons --git'
 alias lta='lt -a'
 alias ff="fzf --preview 'bat --style=numbers --color=always {}'"
@@ -145,9 +145,9 @@ export PATH="$PATH:$HOME/.rvm/bin"
 # Created by `pipx` on 2024-03-21 05:21:11
 export PATH="$PATH:/Users/ben/.local/bin"
 eval "$(rbenv init - zsh)"
-eval "$(~/.local/bin/mise activate)"
-eval "$(~/.local/bin/mise activate)"
+# eval "$(~/.local/bin/mise activate)"
+# eval "$(~/.local/bin/mise activate)"
 # eval "$(zellij setup --generate-auto-start zsh)"
 eval "$(starship init zsh)"
 fastfetch
-eval "$(/Users/ben/.local/bin/mise activate zsh)"
+# eval "$(/Users/ben/.local/bin/mise activate zsh)"

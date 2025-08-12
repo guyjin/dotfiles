@@ -2640,13 +2640,15 @@
 
 
 # BEGIN_KITTY_FONTS
-font_family      family="RecMonoCasual Nerd Font Mono"
+font_family      family='RecMonoCasual Nerd Font Mono' postscript_name=RecMonoCasualNFM
 bold_font        auto
 italic_font      auto
 bold_italic_font auto
+
+font_size 19
 # END_KITTY_FONTS
 
 # BEGIN_KITTY_THEME
-# Catppuccin-Frappe
+# Rosé Pine Dawn
 include current-theme.conf
 # END_KITTY_THEME

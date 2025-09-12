@@ -96,6 +96,7 @@ cask "font-fantasque-sans-mono-nerd-font"
 cask "font-fira-code-nerd-font"
 cask "font-hack-nerd-font"
 cask "font-heavy-data-nerd-font"
+cask "font-lato"
 cask "font-meslo-lg-nerd-font"
 cask "font-monofur-nerd-font"
 cask "font-open-dyslexic-nerd-font"
@@ -120,6 +121,7 @@ cask "transmit"
 cask "vlc"
 mas "1Password for Safari", id: 1569813296
 mas "AdBlock", id: 1402042596
+mas "Consent-O-Matic", id: 1606897889
 mas "Folder Preview", id: 6698876601
 mas "GarageBand", id: 682658836
 mas "iMovie", id: 408981434
@@ -131,3 +133,5 @@ mas "Reeder", id: 1529448980
 mas "Save to Raindrop.io", id: 1549370672
 mas "Shortery", id: 1594183810
 mas "Sink It", id: 6449873635
+mas "SponsorBlock", id: 1573461917
+mas "Wipr", id: 1662217862

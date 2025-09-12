@@ -320,14 +320,6 @@
                         "vendor_id": 13364
                     },
                     "ignore": true
-                },
-                {
-                    "identifiers": {
-                        "is_keyboard": true,
-                        "product_id": 9760,
-                        "vendor_id": 6645
-                    },
-                    "treat_as_built_in_keyboard": true
                 }
             ],
             "name": "Default profile",

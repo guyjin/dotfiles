@@ -1,6 +1,6 @@
 font-family = "RecMonoCasual Nerd Font Mono"
 font-size = 20 
-theme = dark:catppuccin-mocha,light:catppuccin-latte
+theme = dark:Catppuccin Mocha,light:Catppuccin Latte
 window-width = 120
 window-height = 50
 mouse-hide-while-typing = true

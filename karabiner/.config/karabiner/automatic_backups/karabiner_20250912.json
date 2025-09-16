@@ -328,18 +328,6 @@
                         "vendor_id": 6645
                     },
                     "treat_as_built_in_keyboard": true
-                },
-                {
-                    "identifiers": { "is_keyboard": true },
-                    "ignore": true
-                },
-                {
-                    "identifiers": {
-                        "is_keyboard": true,
-                        "product_id": 666,
-                        "vendor_id": 76
-                    },
-                    "ignore": true
                 }
             ],
             "name": "Default profile",

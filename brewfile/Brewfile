@@ -18,6 +18,7 @@ brew "fastfetch"
 brew "fd"
 brew "fzf"
 brew "gh"
+brew "ghostscript"
 brew "git"
 brew "git-extras"
 brew "gitleaks"
@@ -63,6 +64,7 @@ brew "viu"
 brew "w3m"
 brew "wget"
 brew "wimlib"
+brew "wireshark"
 brew "yarn"
 brew "yazi"
 brew "you-get"
@@ -102,6 +104,7 @@ cask "font-monofur-nerd-font"
 cask "font-open-dyslexic-nerd-font"
 cask "font-recursive-mono-nerd-font"
 cask "ghostty"
+cask "google-drive"
 cask "karabiner-elements"
 cask "kitty"
 cask "logitech-options"
@@ -119,6 +122,8 @@ cask "the-unarchiver"
 cask "transmission"
 cask "transmit"
 cask "vlc"
+cask "wireshark-app"
+cask "zoom"
 mas "1Password for Safari", id: 1569813296
 mas "AdBlock", id: 1402042596
 mas "Consent-O-Matic", id: 1606897889
@@ -126,9 +131,11 @@ mas "Folder Preview", id: 6698876601
 mas "GarageBand", id: 682658836
 mas "iMovie", id: 408981434
 mas "Keynote", id: 409183694
+mas "LanScan", id: 472226235
 mas "Numbers", id: 409203825
 mas "Pages", id: 409201541
 mas "Paste", id: 967805235
+mas "Pixelmator Pro", id: 1289583905
 mas "Reeder", id: 1529448980
 mas "Save to Raindrop.io", id: 1549370672
 mas "Shortery", id: 1594183810

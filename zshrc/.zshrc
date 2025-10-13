@@ -151,4 +151,4 @@ eval "$(rbenv init - zsh)"
 eval "$(starship init zsh)"
 eval "$(zoxide init zsh)"
 fastfetch
-# eval "$(/Users/ben/.local/bin/mise activate zsh)"
+eval "$(/opt/homebrew/bin/mise activate zsh)"

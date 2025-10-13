@@ -5,7 +5,6 @@ window-width = 120
 window-height = 50
 mouse-hide-while-typing = true
 
-keybind = ctrl+n=new_window
 
 keybind = ctrl+h=goto_split:left
 keybind = ctrl+j=goto_split:bottom

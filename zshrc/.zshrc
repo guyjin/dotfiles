@@ -80,6 +80,10 @@ export GEM_HOME="$HOME/.gem"
 export GEM_PATH="$GEM_HOME"
 export PATH="$GEM_HOME/bin:$PATH"
 export PATH="$HOME/Scripts:$PATH"
+
+export NVM_DIR="$HOME/.nvm"
+  [ -s "/opt/homebrew/opt/nvm/nvm.sh" ] && \. "/opt/homebrew/opt/nvm/nvm.sh"  # This loads nvm
+  [ -s "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm" ] && \. "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion
 # export MANPATH="/usr/local/man:$MANPATH"
 
 # You may need to manually set your language environment
@@ -152,3 +156,4 @@ eval "$(starship init zsh)"
 eval "$(zoxide init zsh)"
 fastfetch
 eval "$(/opt/homebrew/bin/mise activate zsh)"
+export PATH="/opt/homebrew/opt/ruby/bin:$PATH"

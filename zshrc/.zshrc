@@ -81,9 +81,46 @@ export GEM_PATH="$GEM_HOME"
 export PATH="$GEM_HOME/bin:$PATH"
 export PATH="$HOME/Scripts:$PATH"
 
+# Detect Homebrew installation
+if command -v brew &> /dev/null; then
+    HOMEBREW_PREFIX="$(brew --prefix)"
+else
+    HOMEBREW_PREFIX=""
+fi
+
+# NVM configuration
 export NVM_DIR="$HOME/.nvm"
-  [ -s "/opt/homebrew/opt/nvm/nvm.sh" ] && \. "/opt/homebrew/opt/nvm/nvm.sh"  # This loads nvm
-  [ -s "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm" ] && \. "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion
+if [ -n "$HOMEBREW_PREFIX" ]; then
+    # macOS with Homebrew
+    [ -s "$HOMEBREW_PREFIX/opt/nvm/nvm.sh" ] && \. "$HOMEBREW_PREFIX/opt/nvm/nvm.sh"
+    [ -s "$HOMEBREW_PREFIX/opt/nvm/etc/bash_completion.d/nvm" ] && \. "$HOMEBREW_PREFIX/opt/nvm/etc/bash_completion.d/nvm"
+else
+    # Linux fallback (standard NVM installation)
+    [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
+    [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"
+fi
+
+# rbenv configuration
+if command -v rbenv &> /dev/null; then
+    eval "$(rbenv init - zsh)"
+fi
+
+# mise configuration
+if [ -n "$HOMEBREW_PREFIX" ] && [ -x "$HOMEBREW_PREFIX/bin/mise" ]; then
+    eval "$($HOMEBREW_PREFIX/bin/mise activate zsh)"
+elif command -v mise &> /dev/null; then
+    eval "$(mise activate zsh)"
+fi
+
+# Ruby PATH (Homebrew only)
+if [ -n "$HOMEBREW_PREFIX" ] && [ -d "$HOMEBREW_PREFIX/opt/ruby/bin" ]; then
+    export PATH="$HOMEBREW_PREFIX/opt/ruby/bin:$PATH"
+fi
+
+
+# export NVM_DIR="$HOME/.nvm"
+#  [ -s "/opt/homebrew/opt/nvm/nvm.sh" ] && \. "/opt/homebrew/opt/nvm/nvm.sh"  # This loads nvm
+#  [ -s "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm" ] && \. "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion
 # export MANPATH="/usr/local/man:$MANPATH"
 
 # You may need to manually set your language environment
@@ -148,12 +185,12 @@ export PATH="$PATH:$HOME/.rvm/bin"
 
 # Created by `pipx` on 2024-03-21 05:21:11
 export PATH="$PATH:/Users/ben/.local/bin"
-eval "$(rbenv init - zsh)"
+# eval "$(rbenv init - zsh)"
 # eval "$(~/.local/bin/mise activate)"
 # eval "$(~/.local/bin/mise activate)"
 # eval "$(zellij setup --generate-auto-start zsh)"
 eval "$(starship init zsh)"
 eval "$(zoxide init zsh)"
 fastfetch
-eval "$(/opt/homebrew/bin/mise activate zsh)"
-export PATH="/opt/homebrew/opt/ruby/bin:$PATH"
+# eval "$(/opt/homebrew/bin/mise activate zsh)"
+# export PATH="/opt/homebrew/opt/ruby/bin:$PATH"

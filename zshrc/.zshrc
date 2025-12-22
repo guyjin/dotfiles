@@ -151,7 +151,7 @@ alias lsa='eza -lag --header --group-directories-first --icons'
 alias lt='eza --tree --level=2 --long --icons --git'
 alias lta='lt -a'
 alias ff="fzf --preview 'bat --style=numbers --color=always {}'"
-alias fd='fdfind'
+# alias fd='fdfind'
 alias cd='z'
 alias py='python3'
 alias mkdir='mkdir -p'

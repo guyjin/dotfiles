@@ -1,4 +1,5 @@
-font-family = "RecMonoCasual Nerd Font Mono"
+# font-family = "RecMonoCasual Nerd Font Mono"
+font-family = "JetBrainsMono Nerd Font Mono"
 font-size = 20 
 theme = dark:Catppuccin Mocha,light:Catppuccin Latte
 window-width = 120

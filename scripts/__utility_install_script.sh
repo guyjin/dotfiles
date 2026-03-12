@@ -481,7 +481,109 @@ install_stow() {
     fi
 }
 
-# Clone and setup dotfiles with stow
+# Install yazi (modern file manager)
+install_yazi() {
+    if command -v yazi &> /dev/null; then
+        print_warning "yazi is already installed, skipping..."
+        return
+    fi
+    
+    print_msg "Installing yazi..."
+    if [ "$OS" = "macos" ]; then
+        brew install yazi ffmpegthumbnailer imagemagick poppler
+    elif [ "$OS" = "fedora" ]; then
+        sudo dnf install -y yazi ffmpegthumbnailer ImageMagick poppler-utils
+    elif [ "$OS" = "arch" ]; then
+        sudo pacman -S --noconfirm yazi ffmpegthumbnailer imagemagick poppler
+    fi
+}
+
+# Install bottom (system monitor)
+install_bottom() {
+    if command -v btm &> /dev/null; then
+        print_warning "bottom is already installed, skipping..."
+        return
+    fi
+    
+    print_msg "Installing bottom..."
+    if [ "$OS" = "macos" ]; then
+        brew install bottom
+    elif [ "$OS" = "fedora" ]; then
+        sudo dnf install -y bottom
+    elif [ "$OS" = "arch" ]; then
+        sudo pacman -S --noconfirm bottom
+    fi
+}
+
+# Install gdu (disk usage analyzer)
+install_gdu() {
+    if command -v gdu &> /dev/null; then
+        print_warning "gdu is already installed, skipping..."
+        return
+    fi
+    
+    print_msg "Installing gdu..."
+    if [ "$OS" = "macos" ]; then
+        brew install gdu
+    elif [ "$OS" = "fedora" ]; then
+        sudo dnf install -y gdu
+    elif [ "$OS" = "arch" ]; then
+        sudo pacman -S --noconfirm gdu
+    fi
+}
+
+# Install dust (better du)
+install_dust() {
+    if command -v dust &> /dev/null; then
+        print_warning "dust is already installed, skipping..."
+        return
+    fi
+    
+    print_msg "Installing dust..."
+    if [ "$OS" = "macos" ]; then
+        brew install dust
+    elif [ "$OS" = "fedora" ]; then
+        sudo dnf install -y du-dust
+    elif [ "$OS" = "arch" ]; then
+        sudo pacman -S --noconfirm dust
+    fi
+}
+
+# Install procs (modern ps)
+install_procs() {
+    if command -v procs &> /dev/null; then
+        print_warning "procs is already installed, skipping..."
+        return
+    fi
+    
+    print_msg "Installing procs..."
+    if [ "$OS" = "macos" ]; then
+        brew install procs
+    elif [ "$OS" = "fedora" ]; then
+        sudo dnf install -y procs
+    elif [ "$OS" = "arch" ]; then
+        sudo pacman -S --noconfirm procs
+    fi
+}
+
+# Install glow (markdown viewer)
+install_glow() {
+    if command -v glow &> /dev/null; then
+        print_warning "glow is already installed, skipping..."
+        return
+    fi
+    
+    print_msg "Installing glow..."
+    if [ "$OS" = "macos" ]; then
+        brew install glow
+    elif [ "$OS" = "fedora" ]; then
+        sudo dnf install -y glow
+    elif [ "$OS" = "arch" ]; then
+        sudo pacman -S --noconfirm glow
+    fi
+}
+
+# Install Clone and setup dotfiles with stow
 setup_dotfiles() {
     local DOTFILES_DIR="$HOME/dotfiles"
     local DOTFILES_REPO="https://github.com/guyjin/dotfiles.git"
